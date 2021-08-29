@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "9a339af3-0f13-4051-a597-1124a4b60f2a",
+		"name": "mevn_auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"anuwat\",\r\n    \"password\": \"123456\",\r\n    \"confirm_password\": \"123456\",\r\n    \"email\": \"anuwat@gmail.com\",\r\n    \"name\": \"anuwat.k\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"anuwat\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJiNjkzZDA3NTM1YTA1MWFkYTliNjkiLCJ1c2VybmFtZSI6ImRzYWRhc2Rhc2Rhc2RhIiwibmFtZSI6ImRzYWRhc2Rhc2Rhc2RhLmsiLCJlbWFpbCI6ImRzYWRhc2Rhc2Rhc2RhQGdtYWlsLmNvbSIsImlhdCI6MTYzMDIzNDk1MiwiZXhwIjoxNjMwODM5NzUyfQ.Ia1g09wIVAdhQXR1Snwe4bdnzD4XRT8H_QFdrFv33qY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
